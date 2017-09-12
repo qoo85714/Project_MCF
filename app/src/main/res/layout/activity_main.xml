@@ -68,6 +68,8 @@
             android:layout_margin="5sp"
             android:layout_weight="1"/>
         <Button
+            android:id="@+id/Login"
+            android:onClick="login"
             android:layout_width="280sp"
             android:layout_height="match_parent"
             android:textSize="24sp"
@@ -79,6 +81,8 @@
             android:layout_margin="5sp"
             android:textColor="#fff"/>
         <Button
+            android:id="@+id/guest"
+            android:onClick="guest"
             android:layout_width="280sp"
             android:layout_height="match_parent"
             android:textSize="24sp"
@@ -89,7 +93,6 @@
             android:layout_weight="1"
             android:text="Guest"
             android:layout_margin="5sp"
-
             android:textColor="#fff"/>
 
     </LinearLayout>

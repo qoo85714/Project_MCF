@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<AbsoluteLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="@drawable/gradient"
     tools:context="tw.jason.app.helloworld.mybletestprogect.Main1Activity">
 
     <TextView
         android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="85dp"
-        android:layout_y="22dp"
+        android:layout_width="match_parent"
+        android:layout_height="40sp"
         android:text="Select Device"
+        android:textAlignment="center"
         android:textColor="#fff"
-        android:textSize="36sp" />
+        android:textSize="36sp"
+        />
 
-    <TextView
-        android:layout_width="312dp"
-        android:layout_height="261dp"
-        android:layout_x="29dp"
-        android:layout_y="81dp"
+    <ListView
+        android:layout_width="300sp"
+        android:layout_height="200sp"
+        android:layout_gravity="center"
+        android:layout_margin="5sp"
         android:text="MCF-0000-0000-000"
         android:textSize="30sp"
         android:background="#fff"
@@ -30,12 +30,15 @@
         />
 
     <Button
-        android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="116dp"
-        android:layout_y="378dp"
-        android:text="BACK" />
+        android:id="@+id/back1"
+        android:onClick="backtomain"
+        android:layout_width="300sp"
+        android:layout_height="30sp"
+        android:layout_gravity="center"
+        android:background="@drawable/buttonborder"
+        android:textColor="#fff"
+        android:text="BACK"
+        />
 
 
-</AbsoluteLayout>
+</LinearLayout>
