@@ -29,6 +29,7 @@
             android:textSize="24sp"
             android:layout_weight="1"/>
         <EditText
+            android:id="@+id/ft"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -58,6 +59,7 @@
             android:textSize="24sp" />
 
         <EditText
+            android:id="@+id/inch"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -139,7 +141,7 @@
             android:onClick="back2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Back"
+            android:text="&lt;&lt;Back"
             android:textColor="#fff"
             android:background="@drawable/buttonborder"
             android:layout_margin="5sp"
@@ -149,7 +151,7 @@
             android:onClick="next"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Next"
+            android:text="Next&gt;&gt;"
             android:textColor="#fff"
             android:layout_margin="5sp"
             android:background="@drawable/buttonborder"

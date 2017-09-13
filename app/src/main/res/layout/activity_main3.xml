@@ -11,7 +11,8 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50sp"
+
         android:text="Body Information"
         android:textColor="#fff"
         android:textSize="24sp"
@@ -21,16 +22,17 @@
         android:layout_height="wrap_content">
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50sp"
             android:text="150lb"
             android:textColor="#fff"
             android:textSize="24sp"
             android:textAlignment="center"
             android:layout_weight="1"/>
         <TextView
+            android:id="@+id/height"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="5ft 5inch"
+            android:layout_height="50sp"
+            android:text=""
             android:textColor="#fff"
             android:textSize="24sp"
             android:textAlignment="center"
@@ -41,15 +43,16 @@
         android:layout_height="wrap_content">
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Age:"
+            android:layout_height="50sp"
+            android:text="Age:27"
             android:textColor="#fff"
             android:textSize="24sp"
             android:textAlignment="center"
             android:layout_weight="1"/>
         <TextView
+            android:id="@+id/gender2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50sp"
             android:text="Male"
             android:textColor="#fff"
             android:textSize="24sp"
@@ -58,8 +61,10 @@
     </LinearLayout>
     <TextView
         android:layout_width="320sp"
-        android:layout_height="200sp"
+        android:layout_height="300sp"
         android:background="#fff"
+        android:text="Fat:28.5%\nBone:6.4\nWater:49%\nMuscle:119\nV-Fat:13\nBMI:22.5"
+        android:textSize="30sp"
         android:layout_gravity="center"/>
     <LinearLayout
         android:layout_width="match_parent"
@@ -67,10 +72,10 @@
         android:orientation="horizontal">
         <Button
             android:id="@+id/back3"
-            android:onClick=""
+            android:onClick="edit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Back"
+            android:text="&lt;&lt;Edit"
             android:textColor="#fff"
             android:background="@drawable/buttonborder"
             android:layout_margin="5sp"
@@ -78,7 +83,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Next"
+            android:text="Log out"
             android:textColor="#fff"
             android:layout_margin="5sp"
             android:background="@drawable/buttonborder"

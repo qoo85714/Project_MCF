@@ -19,11 +19,12 @@
         />
 
     <ListView
+        android:id="@+id/list"
         android:layout_width="300sp"
         android:layout_height="200sp"
         android:layout_gravity="center"
         android:layout_margin="5sp"
-        android:text="MCF-0000-0000-000"
+
         android:textSize="30sp"
         android:background="#fff"
 
@@ -37,7 +38,7 @@
         android:layout_gravity="center"
         android:background="@drawable/buttonborder"
         android:textColor="#fff"
-        android:text="BACK"
+        android:text="&lt;&lt;BACK"
         />
 
 
