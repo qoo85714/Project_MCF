@@ -11,7 +11,7 @@ public class Main3Activity extends AppCompatActivity {
     private Button edit;
     private TextView height;
     private TextView gender2;
-
+    private TextView age;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,8 +19,15 @@ public class Main3Activity extends AppCompatActivity {
         edit = (Button)findViewById(R.id.back3);
         height = (TextView)findViewById(R.id.height);
         gender2=(TextView)findViewById(R.id.gender2);
+        age = (TextView)findViewById(R.id.age);
         Bundle bundle = getIntent().getExtras();
         height.setText(bundle.getString("ft")+"ft"+bundle.getString("inch")+"inch");
+        age.setText("Age:"+bundle.getString("birthday"));
+        if(bundle.getString("isMale").equals("true")){
+        gender2.setText("Male");
+        }else {
+            gender2.setText("Female");
+        }
 
         edit.setOnClickListener(new View.OnClickListener() {
             @Override

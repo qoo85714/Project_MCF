@@ -18,19 +18,23 @@ public class Main2Activity extends AppCompatActivity {
     private NumberPicker numberPicker;
     private Calendar calendar;
     private EditText ft,inch;
+    private NumberPicker birthyear;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
         Calendar calendar = Calendar.getInstance();
-        int year = calendar.get(Calendar.YEAR);
+        final int thisyear = calendar.get(Calendar.YEAR);
         m=(Button)findViewById(R.id.M);
         f=(Button)findViewById(R.id.F);
         backto1=(Button)findViewById(R.id.back2);
         nextto3=(Button)findViewById(R.id.next);
         ft = (EditText)findViewById(R.id.ft);
         inch = (EditText)findViewById(R.id.inch);
+        birthyear = (NumberPicker)findViewById(R.id.year);
+
 
         backto1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,10 +48,13 @@ public class Main2Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Bundle bundle = new Bundle();
+                int age;
+                age = thisyear-birthyear.getValue();
                 bundle.putString("ft",ft.getText().toString());
                 bundle.putString("inch",inch.getText().toString());
                 bundle.putString("isMale",String.valueOf(maleischosen));
                 bundle.putString("isFemale",String.valueOf(feamaleischosen));
+                bundle.putString("birthday",""+age);
 
                 Intent intent =new Intent();
                 intent.setClass(Main2Activity.this,Main3Activity.class);
@@ -57,16 +64,25 @@ public class Main2Activity extends AppCompatActivity {
         });
         numberPicker=(NumberPicker)findViewById(R.id.year);
         numberPicker.setMinValue(1900);
-        numberPicker.setMaxValue(year);
+        numberPicker.setMaxValue(thisyear);
         numberPicker.setValue(1980);
+        birthyear.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
+            @Override
+            public void onValueChange(NumberPicker numberPicker, int i, int i1) {
+
+            }
+        });
     }
     public void chooseM(View view){
         if(!maleischosen) {
             m.setBackgroundColor(Color.parseColor("#a6a6a6"));
             f.setBackgroundColor(Color.TRANSPARENT);
+            maleischosen =true;
+            feamaleischosen=false;
 
         }
-        Log.i("brad:male",String.valueOf(maleischosen));
+        Log.i("brad:Mmale",String.valueOf(maleischosen));
+        Log.i("brad:Mfemale",String.valueOf(feamaleischosen));
     }
 
 
@@ -75,7 +91,10 @@ public class Main2Activity extends AppCompatActivity {
         if(!feamaleischosen) {
         f.setBackgroundColor(Color.parseColor("#a6a6a6"));
         m.setBackgroundColor(Color.TRANSPARENT);
+        maleischosen =false;
+        feamaleischosen=true;
         }
-        Log.i("brad:female",String.valueOf(feamaleischosen));
+        Log.i("brad:Ffemale",String.valueOf(feamaleischosen));
+        Log.i("brad:Fmale",String.valueOf(maleischosen));
     }
 }
