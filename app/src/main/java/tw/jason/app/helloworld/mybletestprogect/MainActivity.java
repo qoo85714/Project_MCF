@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
                                     .getHeight() - rect.bottom;
                             Log.i("tag", "最外层的高度" + root.getRootView().getHeight());
                             // 若rootInvisibleHeight高度大于100，则说明当前视图上移了，说明软键盘弹出了
-                            if (rootInvisibleHeight > 300) {
+                            if (rootInvisibleHeight > 500) {
                                 //软键盘弹出来的时候
                                 int[] location = new int[2];
                                 // 获取scrollToView在窗体的坐标
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
                                 // 计算root滚动高度，使scrollToView在可见区域的底部
                                 int srollHeight = (location[1] + scrollToView
                                         .getHeight()) - rect.bottom;
-                                root.scrollTo(0, srollHeight);
+                                root.scrollTo(0, 770);
                             } else {
                                 // 软键盘没有弹出来的时候
                                 root.scrollTo(0, 0);

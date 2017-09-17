@@ -1,11 +1,14 @@
 package tw.jason.app.helloworld.mybletestprogect;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.NumberPicker;
@@ -33,7 +36,7 @@ public class Main2Activity extends AppCompatActivity {
         nextto3=(Button)findViewById(R.id.next);
         ft = (EditText)findViewById(R.id.ft);
         inch = (EditText)findViewById(R.id.inch);
-        birthyear = (NumberPicker)findViewById(R.id.year);
+        //birthyear = (NumberPicker)findViewById(R.id.year);
 
 
         backto1.setOnClickListener(new View.OnClickListener() {
@@ -49,7 +52,7 @@ public class Main2Activity extends AppCompatActivity {
             public void onClick(View view) {
                 Bundle bundle = new Bundle();
                 int age;
-                age = thisyear-birthyear.getValue();
+                age = thisyear-numberPicker.getValue();
                 bundle.putString("ft",ft.getText().toString());
                 bundle.putString("inch",inch.getText().toString());
                 bundle.putString("isMale",String.valueOf(maleischosen));
@@ -66,7 +69,9 @@ public class Main2Activity extends AppCompatActivity {
         numberPicker.setMinValue(1900);
         numberPicker.setMaxValue(thisyear);
         numberPicker.setValue(1980);
-        birthyear.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
+
+
+        numberPicker.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
             @Override
             public void onValueChange(NumberPicker numberPicker, int i, int i1) {
 
@@ -97,4 +102,8 @@ public class Main2Activity extends AppCompatActivity {
         Log.i("brad:Ffemale",String.valueOf(feamaleischosen));
         Log.i("brad:Fmale",String.valueOf(maleischosen));
     }
+
+
+
+
 }
